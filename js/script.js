@@ -7,8 +7,8 @@ import initDropDownMenu from './modules/dropdown-menu.js'
 import initMenuMobile from './modules/menu-mobile.js'
 import initFuncionamento from './modules/funcionamento.js'
 import fetchAnimais from './modules/fetch-animais.js'
-import initFetchBitcoin from './modules/fetch-bitcoin.js'
 import initAnimacaoScroll from './modules/scroll-animacao.js'
+import fetchBitcoin from './modules/fetch-bitcoin.js'
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]')
 scrollSuave.init()
@@ -29,7 +29,7 @@ initDropDownMenu()
 initMenuMobile()
 initFuncionamento()
 fetchAnimais('../../animaisapi.json', '.numeros-grid')
-initFetchBitcoin()
+fetchBitcoin('https://blockchain.info/ticker', '.btc-preco')
 initAnimacaoScroll()
 
 // ativar webpack npm run dev
